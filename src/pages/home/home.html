@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title> Home Page </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+
+<ion-card>
+
+    <ion-card-content *ngFor="let item of items">
+
+  <img src="../../assets/imgs/land.png">
+<ion-card-title>
+      {{item.name}}
+      </ion-card-title>
+
+    <p>{{item.body}}</p>
+
+ <div class="row">
+
+      <div class="info1"> Cotact No: </div>
+
+      <div class="info2"> 9876436281 </div>
+    </div>
+
+     <div class="row">
+
+      <div class="info1"> Price: </div>
+
+      <div class="info2"> 100,00,000 </div>
+    </div>
+
+    <div class="row">
+
+      <div class="info1"> Email: </div>
+
+      <div class="info2"> {{item.email}} </div>
+    </div>
+
+
+
+  
+      <button ion-button icon-start small class="alertbutton" (click)="showPopup()">
+        <ion-icon name="View"></ion-icon>
+        <div>View More Details</div>
+      </button>
+   
+<hr class="hr"> 
+
+  </ion-card-content>
+</ion-card>
+
+
+  
+</ion-content>

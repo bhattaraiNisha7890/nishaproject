@@ -1,0 +1,129 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="formgroup">
+
+    <ion-item>
+      <ion-label stacked class="my-label">Type of User</ion-label>
+      <ion-input type="text" formControlName="userInput" placeholder="Enter User Type"  required></ion-input>
+    </ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.userInput.hasError('required') && formgroup.controls.userInput.touched"> 
+*User Type is required !! </p>
+    
+	<ion-item>
+	    <ion-label stacked class="my-label">User Name</ion-label>
+	    <ion-input type="text" formControlName="firstnameInput" placeholder="Enter your First Name"  required></ion-input>
+  	</ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.firstnameInput.hasError('required') && formgroup.controls.emailInput.touched"> 
+*User Name is required !! </p>
+
+  	<ion-item>
+	    <ion-label stacked class="my-label"> Name</ion-label>
+	    <ion-input type="text" formControlName="lastnameInput" placeholder="Enter your Last Name"  required></ion-input>
+  	</ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.lastnameInput.hasError('required') && formgroup.controls.lastnameInput.touched"> 
+*Full Name is required !! </p>
+
+  	<ion-item>
+	    <ion-label stacked class="my-label">Email Addres</ion-label>
+	    <ion-input type="Email" formControlName="emailInput" placeholder="Enter your Email"  required></ion-input>
+  	</ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.emailInput.hasError('required') && formgroup.controls.emailInput.touched"> 
+*Email Address is required !! </p>
+
+<ion-item>
+      <ion-label stacked class="my-label">Phone</ion-label>
+      <ion-input type="Number" formControlName="phoneInput" placeholder="Enter your Phone"  required></ion-input>
+    </ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.phoneInput.hasError('required') && formgroup.controls.phoneInput.touched"> 
+*Phone is required !! </p>
+
+
+  	<ion-item>
+	    <ion-label stacked class="my-label">Password</ion-label>
+	    <ion-input type="Password" formControlName="passwordInput" placeholder="Enter your Password"  required></ion-input>
+  	</ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.passwordInput.hasError('required') && formgroup.controls.passwordInput.touched"> 
+*Password is required !! </p>
+
+<ion-item>
+      <ion-label stacked class="my-label">Confirm Password</ion-label>
+      <ion-input type="Password" formControlName="confirmpasswordInput" placeholder="Enter Confirm Password"  required></ion-input>
+    </ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.confirmpasswordInput.hasError('required') && formgroup.controls.confirmpasswordInput.touched"> 
+*Confirm Password is required !! </p>
+
+<ion-item>
+      <ion-label stacked class="my-label">Street</ion-label>
+      <ion-input type="text" formControlName="streetInput" placeholder="Enter Your Street"  required></ion-input>
+    </ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.streetInput.hasError('required') && formgroup.controls.streetInput.touched"> 
+*Street is required !! </p>
+
+<ion-item>
+      <ion-label stacked class="my-label">Zone</ion-label>
+      <ion-input type="text" formControlName="zoneInput" placeholder="Enter Your Zone"  required></ion-input>
+    </ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.zoneInput.hasError('required') && formgroup.controls.zoneInput.touched"> 
+*Zone is required !! </p>
+
+<ion-item>
+      <ion-label stacked class="my-label">City</ion-label>
+      <ion-input type="text" formControlName="cityInput" placeholder="Enter Your City"  required></ion-input>
+    </ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.cityInput.hasError('required') && formgroup.controls.cityInput.touched"> 
+*Zone is required !! </p>
+
+<ion-item>
+      <ion-label stacked class="my-label">Country</ion-label>
+      <ion-input type="text" formControlName="countryInput" placeholder="Enter Your Country" required></ion-input>
+    </ion-item>
+
+    <p class="myerror" *ngIf="formgroup.controls.countryInput.hasError('required') && formgroup.controls.countryInput.touched"> 
+*Country is required !! </p>
+
+
+
+  	<br>
+  	<br>
+
+  	<button ion-button full (click)="signupButton(formgroup)"> Sign Up </button>
+
+    <button ion-button full (click)="getData()"> Get Data </button>
+
+    <!-- <button ion-button full (click)="updateData()"> Update Data </button> -->
+
+
+
+  	<p> Already have an account </p>
+  	<p class="signinHere"> Sign in </p>
+
+
+
+</form>
+
+
+</ion-content>

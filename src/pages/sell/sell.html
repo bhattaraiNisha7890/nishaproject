@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Sell
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<h6 class="title"> Please Fill The Form To Sell Your Property !! </h6>
+ 
+
+<form [formGroup]="formgroup">
+
+
+	<ion-item>
+	    <ion-label stacked class="my-label">Description of Property </ion-label>
+	    <ion-input type="text" formControlName="description" ></ion-input>
+  	</ion-item>
+
+  	
+  		<p class="myerror" *ngIf="formgroup.controls.description.hasError('required') && formgroup.controls.description.touched"> *Description is required !!</p>
+  	
+
+	
+  <ion-item>
+	    <ion-label stacked class="my-label">Contact Number</ion-label>
+	    <ion-input type="number" formControlName="contact"></ion-input>
+  </ion-item>
+
+  		<p class="myerror" *ngIf="formgroup.controls.contact.hasError('required') && formgroup.controls.contact.touched"> *Contact Number is required !!</p>
+  	
+	
+  <ion-item>
+	    <ion-label  stacked class="my-label">Price Range</ion-label>
+	    <ion-input type="number" formControlName="price"></ion-input>
+  </ion-item>
+
+  
+  		<p class="myerror" *ngIf="formgroup.controls.price.hasError('required') && formgroup.controls.price.touched"> *Price value is required !!</p>
+  
+  <ion-item>
+	    <ion-label stacked class="my-label">Image Upload</ion-label>
+	    <ion-input type="file" (change)="onFileSelected($event)" formControlName="file"></ion-input>
+	    <button  type="button" (click)="onUpload()"> Upload</button>
+  </ion-item>
+
+  
+  		<p class="myerror" *ngIf="formgroup.controls.file.hasError('required') && formgroup.controls.file.touched"> *Image is required !!</p>
+  	
+ 
+  <br>
+  <br>
+
+
+  	<button ion-button full  type="submit" >Submit</button>
+
+
+</form>
+
+</ion-content>

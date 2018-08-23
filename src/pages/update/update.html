@@ -1,0 +1,105 @@
+<!--
+  Generated template for the UpdatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Update Data</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	 <form [formGroup]="formgroup">
+
+    <ion-item>
+      <ion-label stacked class="my-label">Type of User</ion-label>
+      <ion-input type="text" formControlName="userInput" placeholder="Enter User Type" > </ion-input>
+    </ion-item>
+
+    
+    
+	<ion-item>
+	    <ion-label stacked class="my-label">User Name</ion-label>
+	    <ion-input type="text" formControlName="firstnameInput" placeholder="Enter your First Name" > </ion-input>
+  	</ion-item>
+
+
+  	<ion-item>
+	    <ion-label stacked class="my-label"> Name</ion-label>
+	    <ion-input type="text" formControlName="lastnameInput" placeholder="Enter your Last Name" > </ion-input>
+  	</ion-item>
+
+ 
+
+  	<ion-item>
+	    <ion-label stacked class="my-label">Email Addres</ion-label>
+	    <ion-input type="Email" formControlName="emailInput" placeholder="Enter your Email" > </ion-input>
+  	</ion-item>
+
+    
+
+<ion-item>
+      <ion-label stacked class="my-label">Phone</ion-label>
+      <ion-input type="Number" formControlName="phoneInput" placeholder="Enter your Phone" > </ion-input>
+    </ion-item>
+
+   
+
+
+  	<ion-item>
+	    <ion-label stacked class="my-label">Password</ion-label>
+	    <ion-input type="Password" formControlName="passwordInput" placeholder="Enter your Password" > </ion-input>
+  	</ion-item>
+
+    
+
+<ion-item>
+      <ion-label stacked class="my-label">Confirm Password</ion-label>
+      <ion-input type="Password" formControlName="confirmpasswordInput" placeholder="Enter Confirm Password" > </ion-input>
+    </ion-item>
+
+   
+
+<ion-item>
+      <ion-label stacked class="my-label">Street</ion-label>
+      <ion-input type="text" formControlName="streetInput" placeholder="Enter Your Street" > </ion-input>
+    </ion-item>
+
+  
+
+<ion-item>
+      <ion-label stacked class="my-label">Zone</ion-label>
+      <ion-input type="text" formControlName="zoneInput" placeholder="Enter Your Zone" > </ion-input>
+    </ion-item>
+
+   
+
+<ion-item>
+      <ion-label stacked class="my-label">City</ion-label>
+      <ion-input type="text" formControlName="cityInput" placeholder="Enter Your City" > </ion-input>
+    </ion-item>
+
+   
+
+<ion-item>
+      <ion-label stacked class="my-label">Country</ion-label>
+      <ion-input type="text" formControlName="countryInput" placeholder="Enter Your Country" > </ion-input>
+    </ion-item>
+
+ 
+  	<br>
+  	<br>
+
+  	<button ion-button full (click)="save(formgroup)" > Save </button>
+
+ 
+</form>
+
+
+</ion-content>
